@@ -14,6 +14,8 @@ resource "azurerm_service_plan" "this" {
   location            = each.value.location
   os_type             = each.value.os_type  # typically "Linux"
   sku_name            = each.value.sku_name # e.g., "P1v2"
+  depends_on = [ azurerm_resource_group.this ]
+  # Optional, defaults to false
 }
 
 resource "azurerm_linux_web_app" "this" {
@@ -23,8 +25,11 @@ resource "azurerm_linux_web_app" "this" {
   resource_group_name = each.value.resource_group_name
   location            = each.value.location
   service_plan_id     = azurerm_service_plan.this[each.key].id
+depends_on = [ azurerm_service_plan.this ]
+
 
   site_config {
+    always_on          = try(each.value.always_on, false) 
     # Add runtime, version, etc., if needed
   }
 

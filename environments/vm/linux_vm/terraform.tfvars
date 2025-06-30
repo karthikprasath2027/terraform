@@ -7,7 +7,7 @@ azure_virtual_machines = {
 
     vm_size             = "Standard_B1s"
     admin_username      = "azureuser"
-    ssh_public_key_path = "~/.ssh/id_rsa.pub"
+    admin_password      = "P@ssw0rd123"
 
     image_publisher = "Canonical"
     image_offer     = "0001-com-ubuntu-server-jammy"

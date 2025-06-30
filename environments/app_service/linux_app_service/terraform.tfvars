@@ -9,14 +9,14 @@ azure_app_service = {
     sku_name = "F1"
 
 
-  always_on = "False" 
+    always_on = "false"
 
     # app_settings = {
     #   "WEBSITE_RUN_FROM_PACKAGE" = "1"
     #   "APPINSIGHTS_INSTRUMENTATIONKEY" = "0000-xxxx-0000-xxxx"
   }
- # Runtime or other settings can go here
-  
+  # Runtime or other settings can go here
+
 
   # Optional: Uncomment if connection strings are supported in your module
   # connection_strings = [
@@ -26,5 +26,8 @@ azure_app_service = {
   #     value = "Server=tcp:myserver.database.windows.net,1433;Initial Catalog=mydb;User ID=admin@myserver;Password=secret;"
   #   }
   # ]
+
+
+
 }
 

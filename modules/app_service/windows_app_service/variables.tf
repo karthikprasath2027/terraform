@@ -9,7 +9,7 @@ variable "azure_app_service" {
 
     os_type               = string      # e.g., "Linux"
     sku_name              = string      # e.g., "P1v2"
-
+    always_on           = optional(string, "false")  # Optional, default is "False"
     app_settings          = optional(map(string), {})  # Optional app settings
 
 # commented out properties can be used in future if needed
@@ -20,4 +20,9 @@ variable "azure_app_service" {
     # connection_string_type    = string
     # connection_string_value   = string
   }))
+
+
+
+ 
+
 }

@@ -6,10 +6,10 @@ variable "azure_app_service" {
     app_service_plan_name = string
     app_service_name      = string
 
-    os_type               = string              # "Linux"
-    sku_name              = string              # Example: "P1v2"
+    os_type  = string # "Linux"
+    sku_name = string # Example: "P1v2"
 
-    app_settings          = optional(map(string), {})
+    app_settings = optional(map(string), {})
 
     # Optional future use
     # connection_strings   = optional(list(object({

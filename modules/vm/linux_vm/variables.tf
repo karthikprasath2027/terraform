@@ -7,7 +7,8 @@ variable "azure_virtual_machines" {
     vm_size             = string
 
     admin_username      = string
-    ssh_public_key_path = string
+    admin_password      = string
+    #ssh_public_key_path = string
 
     image_publisher = string
     image_offer     = string

@@ -34,12 +34,16 @@ resource "azurerm_linux_virtual_machine" "this" {
   size                = each.value.vm_size
 
   admin_username        = each.value.admin_username
+  admin_password        = each.value.admin_password
   network_interface_ids = [azurerm_network_interface.this[each.key].id]
 
-  admin_ssh_key {
-    username   = each.value.admin_username
-    public_key = file(each.value.ssh_public_key_path)
-  }
+
+
+  # Uncomment the following lines, to use SSH keys instead of password authentication  
+  # admin_ssh_key {
+  #   username   = each.value.admin_username
+  #   public_key = file(each.value.ssh_public_key_path)
+  # }
 
   os_disk {
     caching              = "ReadWrite"

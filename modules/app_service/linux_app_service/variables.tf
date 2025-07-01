@@ -11,7 +11,10 @@ variable "azure_app_service" {
     sku_name              = string      # e.g., "P1v2"
     always_on           = optional(string, "false")  # Optional, default is "False"
     app_settings          = optional(map(string), {}) 
-    tags = optional(map(string), {})  # Optional tags for the app service
+
+
+    asp_tag = optional(map(string), {})  # Optional tags for the app service
+    app_tag          = optional(map(string), {})  # Optional tags for the web app
      # Optional app settings
   }))
   # Optional tags for the app service

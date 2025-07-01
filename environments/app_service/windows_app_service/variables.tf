@@ -10,7 +10,8 @@ variable "azure_app_service" {
     sku_name              = string              # Example: "P1v2"
 
     app_settings          = optional(map(string), {})
-
+    asp_tag              = optional(map(string), {})  # Optional tags for the app service plan
+    app_tag              = optional(map(string), {})  # Optional tags for the web app
     # Optional future use
     # connection_strings   = optional(list(object({
     #   name  = string

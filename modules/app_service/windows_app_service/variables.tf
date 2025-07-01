@@ -12,6 +12,10 @@ variable "azure_app_service" {
     always_on           = optional(string, "false")  # Optional, default is "False"
     app_settings          = optional(map(string), {})  # Optional app settings
 
+
+    app_tag = optional(map(string),{})
+    asp_tag = optional(map(string),{})
+
 # commented out properties can be used in future if needed
     # dotnet_framework_version  = string
     # scm_type                  = string

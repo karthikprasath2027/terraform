@@ -11,6 +11,18 @@ azure_app_service = {
 
     always_on = "false"
 
+
+asp_tag = {
+      place = "tfvar_asp"
+      time        = "now"
+    }
+
+
+app_tag = {
+      place = "tfvar_app"
+      time        = "now"
+    }
+
     # app_settings = {
     #   "WEBSITE_RUN_FROM_PACKAGE" = "1"
     #   "APPINSIGHTS_INSTRUMENTATIONKEY" = "0000-xxxx-0000-xxxx"

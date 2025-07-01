@@ -15,6 +15,9 @@ resource "azurerm_service_plan" "this" {
   os_type             = each.value.os_type  # typically "Linux"
   sku_name            = each.value.sku_name # e.g., "P1v2"
   depends_on = [ azurerm_resource_group.this ]
+  tags= merge({mod="main_asp",time="now"},each.value.asp_tag)
+
+
 }
 
 resource "azurerm_windows_web_app" "this" {
@@ -32,4 +35,5 @@ resource "azurerm_windows_web_app" "this" {
 
   app_settings = each.value.app_settings
   depends_on = [ azurerm_service_plan.this ]
+  tags= merge({mod="main_app,",time="now"},each.value.app_tag)
 }

@@ -6,4 +6,14 @@ azure_storage_accounts = {
     account_tier             = "Standard"
     account_replication_type = "LRS"
   }
+
+  artifacts = {
+    name                     = "bittyboughtabutter"
+    resource_group_name      = "delete"
+    location                 = "Central India"
+    account_tier             = "Standard"
+    account_replication_type = "LRS"
+  }
 }
+
+

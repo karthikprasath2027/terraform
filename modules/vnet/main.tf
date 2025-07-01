@@ -11,10 +11,7 @@ resource "azurerm_virtual_network" "this" {
   address_space       = each.value.address_space
   location            = each.value.location
   resource_group_name = azurerm_resource_group.this.name
-  tags = {
-    owner="karthik",
-    environment="dev",
-  }
+
   depends_on = [ azurerm_resource_group.this ]
 }
 

@@ -10,9 +10,12 @@ resource "azurerm_storage_account" "this" {
   # allow_blob_public_access = false remiander to uncomment after updating the version of the provider
   #enable_https_traffic_only = true
 
-  tags = {
-    environment = "dev"
-  }
+
+  depends_on = [ azurerm_resource_group.this ]
+
+
+  tags = merge({type="storage account"},each.value.tags)
+
 }
 
 resource "azurerm_resource_group" "this" {

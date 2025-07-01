@@ -37,6 +37,7 @@ resource "azurerm_linux_virtual_machine" "this" {
   admin_password        = each.value.admin_password
   network_interface_ids = [azurerm_network_interface.this[each.key].id]
 
+   tags = merge({environment="bev",time="now"},each.value.tags)
 
 
   # Uncomment the following lines, to use SSH keys instead of password authentication  
@@ -59,8 +60,6 @@ resource "azurerm_linux_virtual_machine" "this" {
 
   disable_password_authentication = true
 
-  tags = {
-    environment = "dev"
-  }
+
 }
 

@@ -13,5 +13,10 @@ azure_virtual_machines = {
     image_offer     = "UbuntuServer"
     image_sku       = "18.04-LTS"
     image_version   = "latest"
+
+    tags = {
+      environment = "prd"
+      role        = "windows"
+    }
   }
 }

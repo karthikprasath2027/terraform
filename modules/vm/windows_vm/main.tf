@@ -48,9 +48,9 @@ resource "azurerm_windows_virtual_machine" "this" {
     version   = each.value.image_version
   }
 
-  tags = {
-    environment = "dev"
-  }
+  
+tags = merge ({environment = "open"}, each.value.tags)
+
 }
 
 

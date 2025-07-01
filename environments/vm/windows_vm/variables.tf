@@ -13,5 +13,9 @@ variable "azure_virtual_machines" {
     image_offer     = string
     image_sku       = string
     image_version   = string
-  }))
+    tags            = optional(map(string), {})
+
+    }
+  ))
+
 }

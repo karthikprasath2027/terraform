@@ -7,17 +7,6 @@ variable "vnet_config" {
     subnet_address_prefixes = list(string)
     location                = string
     resource_group_name     = string
+    tags                    = optional(map(string), {})
   }))
-}
-
-variable "resource_group_name" {
-  description = "Name of the resource group where the VNet will be created"
-  type        = string
-  
-}
-
-variable "location" {
-  description = "Location where the VNet will be created"
-  type        = string
-  
 }

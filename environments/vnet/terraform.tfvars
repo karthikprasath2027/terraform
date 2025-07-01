@@ -6,13 +6,13 @@ vnet_config = {
     subnet_address_prefixes = ["10.0.1.0/24"]
     location                = "East US"
     resource_group_name     = "VNET-rg"
-    tag = {
+    tags = {
       environment = "production"
       owner       = "network-team"
     }
   }
 
-    spoke = {
+  spoke = {
     vnet_name               = "spoke-vnet"
     address_space           = ["10.0.0.0/16"]
     subnet_name             = "spoke-subnet"
@@ -21,9 +21,5 @@ vnet_config = {
     resource_group_name     = "VNET-rg"
   }
 }
-
-
-resource_group_name = "VNET-rg"
-location = "East US"
 
 

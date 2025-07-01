@@ -5,15 +5,12 @@ azure_storage_accounts = {
     location                 = "East US"
     account_tier             = "Standard"
     account_replication_type = "LRS"
+    tags = {
+      owner       = "karthik"
+    }
   }
 
-  artifacts = {
-    name                     = "bittyboughtabutter"
-    resource_group_name      = "delete"
-    location                 = "Central India"
-    account_tier             = "Standard"
-    account_replication_type = "LRS"
-  }
+
 }
 
 

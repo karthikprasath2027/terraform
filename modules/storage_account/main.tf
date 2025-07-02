@@ -17,11 +17,3 @@ resource "azurerm_storage_account" "this" {
   tags = merge({type="storage account"},each.value.tags)
 
 }
-
-# resource "azurerm_resource_group" "this" {
-#   for_each = var.azure_storage_accounts
-
-#   name     = each.value.resource_group_name
-#   location = each.value.location
-  
-# }

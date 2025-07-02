@@ -7,6 +7,4 @@ output "web_app_id" {
 }
 
 
-output "resource_group_id" {
-  value = [for rg in azurerm_resource_group.this : rg.id]
-}
+

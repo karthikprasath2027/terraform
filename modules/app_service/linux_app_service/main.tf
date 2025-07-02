@@ -1,9 +1,3 @@
-resource "azurerm_resource_group" "this" {
-  for_each = var.azure_app_service
-
-  name     = each.value.resource_group_name
-  location = each.value.location
-}
 
 
 resource "azurerm_service_plan" "this" {
@@ -14,7 +8,7 @@ resource "azurerm_service_plan" "this" {
   location            = each.value.location
   os_type             = each.value.os_type  # typically "Linux"
   sku_name            = each.value.sku_name # e.g., "P1v2"
-  depends_on = [ azurerm_resource_group.this ]
+  
  tags = merge({mod="main_asp, time=now"}, each.value.asp_tag)
 
   # Optional, defaults to false

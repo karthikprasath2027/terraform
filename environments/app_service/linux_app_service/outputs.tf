@@ -7,7 +7,3 @@ output "app_id" {
   value = module.app_service.web_app_id
 }
 
-output "resource_group_id" {
-  value = module.app_service.resource_group_id
-
-}

@@ -1,8 +1,8 @@
 azure_storage_accounts = {
   logs = {
-    name                     = "1darkknightrises"
-    resource_group_name      = "SA-rg"
-    location                 = "East US"
+    name                     = "teststorageacounthabskb"
+    resource_group_name      = "implicit-resource-group"
+    location                 = "Central India"
     account_tier             = "Standard"
     account_replication_type = "LRS"
     tags = {
@@ -13,7 +13,7 @@ azure_storage_accounts = {
 
 }
 
-resource_group_name = "SA-redg"
-location = "West US"
+resource_group_name = "moduler-resource-group"
+location = "South India"
 
 

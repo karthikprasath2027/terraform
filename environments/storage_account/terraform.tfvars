@@ -13,7 +13,4 @@ azure_storage_accounts = {
 
 }
 
-resource_group_name = "moduler-resource-group"
-location = "South India"
-
 

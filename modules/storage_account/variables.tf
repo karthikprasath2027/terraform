@@ -10,3 +10,4 @@ variable "azure_storage_accounts" {
   }))
 }
 
+

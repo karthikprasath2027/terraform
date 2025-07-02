@@ -13,4 +13,7 @@ azure_storage_accounts = {
 
 }
 
+resource_group_name = "SA-redg"
+location = "West US"
+
 
